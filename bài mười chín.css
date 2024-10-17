@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(180deg, #5e8c46 0%, #5e8c46 60%, #e0e0e0 100%);
+    height: 300px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 50px;
+}
+
+.header-image {
+    background-image: url('header.jpg'); /* Thay bằng ảnh thực tế */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+
+.header-text {
+    position: absolute;
+    top: 130px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    width: auto;
+}
+
+/* Thanh điều hướng */
+nav {
+    background-color: #333;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Nội dung chính */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.content {
+    width: 70%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    color: #5e8c46;
+}
+
+.sidebar {
+    width: 30%;
+    background-color: #f9f9f9;
+    margin-left: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Chân trang */
+footer {
+    background-color: #3e3e3e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Bullet points trong menu */
+.bullet {
+    list-style-image: url('bullet.png');
+}
+
+/* Đường phân cách dọc */
+.vline {
+    border-left: 1px solid #ccc;
+    height: 100%;
+    margin: 0 20px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Màn hình nhỏ (điện thoại) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content, .sidebar {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .vline {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Màn hình rất nhỏ (điện thoại nhỏ hơn) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    .header-text {
+        font-size: 18px;
+        top: 110px;
+    }
+
+    .content h2 {
+        font-size: 20px;
+    }
+}
